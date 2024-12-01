@@ -1,0 +1,3 @@
+### nacos-config-prop-sample GET 请求
+GET http://localhost:103/demo/echo
+Accept: application/json

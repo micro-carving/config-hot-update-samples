@@ -1,0 +1,21 @@
+server:
+  port: 102
+
+spring:
+  application:
+    name: refresh-scope-config-prop-sample
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: d8a5e82b-1d9e-4d61-b254-e44945bbd796
+        group: DEFAULT_GROUP
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        file-extension: yaml
+        shared-configs:
+          - data-id: common.yaml
+            group: DEFAULT_GROUP
+            refresh: true

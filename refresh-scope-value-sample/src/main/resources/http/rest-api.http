@@ -1,0 +1,3 @@
+### refresh-scope-value-sample GET 请求
+GET http://localhost:101/demo/echo
+Accept: application/json
